@@ -1,10 +1,11 @@
-// your code here!function countWords(){
+
+function countWords(){
 var wordCount = ($('#user-text').val().split(' ').length);
  return wordCount;
 }
 
 function averageWords(){
-  var average = $('#user-text').val().length / $('#user-text').val().split(' ').length 
+  var average = $('#user-text').val().length /  $('#user-text').val().split(' ').length 
   return average;
   }
 
@@ -16,9 +17,16 @@ function uniqueWords() {
     if (avgarray[i] !== $('#user-text').val().split(' ').length[i]) {
       unique.push(i);
       return unique;
-      
-    }
-  }
-   
-}
+}}}
+$('button').on('click', function() {
+  event.preventDefault();
+  $('.text-report').toggleClass('hidden');
+  $('.text-report dd:first').text(countWords());
+  $('.1').text(uniqueWords());
+  $('.2').text(averageWords());
+  
+  
+})
+  
+
   
